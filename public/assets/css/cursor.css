@@ -1,0 +1,28 @@
+#cursor-box {
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 15000;
+    border-style: solid;
+    border-color: dodgerblue;
+    opacity: 0;
+}
+
+.animated {
+    animation: cursor 0.5s ease;
+}
+
+@keyframes cursor {
+    0% {
+        width: 15px;
+        height: 15px;
+        border-width: 1px;
+        opacity: 1;
+    }
+    100% {
+        width: 50px;
+        height: 50px;
+        border-width: 5px;
+        opacity: 0;
+    }
+}
