@@ -3,9 +3,11 @@ window.onload = () => {
     let cursor_box = document.querySelector("#cursor-box");
 
     const moveHandler = (event) => {
-        let rem = 20;
-        cursor_box.style.left = ( event.pageX - rem ) + "px";
-        cursor_box.style.top = ( event.pageY - rem ) + "px";
+        let rem = cursor_box.offsetWidth / 2;
+        let x = event.pageX - rem;
+        let y = event.pageY - rem;
+
+        cursor_box.style.transform = "translate(" + x + "px, "  + y + "px)";
     };
 
     const setMousemoveHandler = (func) => {
