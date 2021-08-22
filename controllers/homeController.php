@@ -1,5 +1,6 @@
 <?php
 
+include_once __DIR__ . '/../core/config.php';
 include_once __DIR__ . '/../models/homeModel.php';
 
 $home = new homeModel();
@@ -7,7 +8,7 @@ $home = new homeModel();
 class homeController extends Controller {
 	
 	public function def () {
-		include __DIR__ . '/../views/home.php';
+		$this->render('home');
 	}
 	
 	/*
@@ -24,8 +25,10 @@ class homeController extends Controller {
 	*/
 	
 	private function checkAccess () : bool {
+		global $host;
+		
 		if ( count($_SESSION) == 0 ) {
-			header("Location: 127.0.0.1/bhent_prods/royal_bank/home");
+			header("Location: " . $host . "home");
 			return false;
 		}
 		return true;

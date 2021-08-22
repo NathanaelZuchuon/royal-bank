@@ -13,14 +13,14 @@ class Model {
 	}
 	
 	private function getInstance () : PDO {
-		global $host;
+		global $db_host;
 		global $db_name;
 		global $db_user;
 		global $db_password;
 		
 		if (is_null(self::$_db_instance)) {
 			try {
-				self::$_db_instance = new PDO( "mysql:host=$host;dbname=$db_name", $db_user, $db_password);
+				self::$_db_instance = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_password);
 			} catch (Exception $e) {
 				die('Erreur : ' . $e->getMessage());
 			}

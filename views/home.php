@@ -5,7 +5,7 @@
 	<?php include __DIR__ . '/../views/head.php'; ?>
     
     <title>Home | ROYAL BANK</title>
-    <link rel="stylesheet" href=<?="http://127.0.0.1/bhent_prods/royal_bank/" . "public/assets/css/index.css"?>>
+    <link rel="stylesheet" href=<?=$host . "public/assets/css/index.css"?>>
 </head>
 
 <body>

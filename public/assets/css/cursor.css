@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 #cursor-box-parent {
     width: 70px;
     height: 70px;
